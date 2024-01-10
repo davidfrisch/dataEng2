@@ -2,12 +2,12 @@ from time import time
 
 import matplotlib.pyplot as plt
 from scipy.stats import loguniform
-
 from sklearn.datasets import fetch_lfw_people
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 import pickle
+import os
 
 def get_training_test_set():
     lfw_people = fetch_lfw_people(min_faces_per_person=70, resize=0.4)
@@ -46,3 +46,6 @@ def get_training_test_set():
     pickle.dump(target_names, open("target_names.pkl", "wb"))
     pickle.dump(h, open("h.pkl", "wb"))
     pickle.dump(w, open("w.pkl", "wb"))
+
+if __name__ == "__main__":
+    get_training_test_set()

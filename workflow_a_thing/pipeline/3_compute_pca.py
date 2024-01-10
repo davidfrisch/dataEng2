@@ -33,9 +33,9 @@ def compute_pca(X_train_filepath, X_test_filepath, h_filepath, w_filepath):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Compute PCA")
-    parser.add_argument("--X_train_filepath", type=str, default="X_train.pkl")
-    parser.add_argument("--X_test_filepath", type=str, default="X_test.pkl")
-    parser.add_argument("--h_filepath", type=str, default="h.pkl")
-    parser.add_argument("--w_filepath", type=str, default="w.pkl")
+    parser.add_argument("--X_train_filepath", type=str)
+    parser.add_argument("--X_test_filepath", type=str)
+    parser.add_argument("--h_filepath", type=str)
+    parser.add_argument("--w_filepath", type=str)
     args = parser.parse_args()
     compute_pca(args.X_train_filepath, args.X_test_filepath, args.h_filepath, args.w_filepath)
