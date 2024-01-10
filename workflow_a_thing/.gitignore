@@ -1,0 +1,6 @@
+*.pkl
+venv
+lfw_funneled
+__pycache__
+*.png
+*.tgz
